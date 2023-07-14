@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Update Pet
+{% endblock %}
+
+{% block content %}
+
+<h1> {{ pet.name }} </h1>
+{% if pet.phot_url %}
+<img src="{{ pet.photo_url }}" class="img-fluid">
+{% endif %}
+
+<h2>Update</h2>
+
+<form method="Post">
+    {{form.hidden_tag()}}
+    {% for field in form if field.widget.input_type != 'hidden' %}
+    <p>
+        {{field.label}}
+        {{field (class="form-control")}}
+    </p>
+    {% endfor %}
+    <button class="btn btn-primary" type="submit"> Update</button>
+</form>
+
+{% endblock %}
