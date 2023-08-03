@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %} Cupcake {% endblock %}
+
+{% block content %}
+
+
+<body>
+
+    <h1>All Cupcakes!</h1>
+    <ul id="cupcakes-list">
+
+    </ul>
+
+    <form id="new-cupcake-form" class="form-control">
+        <div>
+            <label for="form-flavor">Flavor: </label>
+            <input name="flavor" id="form-flavor" class="form-control" required>
+        </div>
+
+        <div>
+            <label for="form-size">Size: </label>
+            <input name="size" id="form-size" class="form-control" required>
+        </div>
+
+        <div>
+            <label for="form-rating">Rating: </label>
+            <input name="rating" id="form-rating" class="form-control" required>
+        </div>
+
+        <div>
+            <label for="form-image">Image: </label>
+            <input name="image" id="form-image" class="form-control">
+        </div>
+
+        <button>ADD</button>
+    </form>
+
+
+
+
+    <script src="https://unpkg.com/jquery"></script>
+    <script src="https://unpkg.com/axios/dist/axios.js"></script>
+    <script src="/static/cupcakes.js"></script>
+</body>
+
+{% endblock %}
