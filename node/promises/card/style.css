@@ -1,0 +1,21 @@
+body{
+    text-align: center;
+    background-color: green;
+}
+
+button{
+    background-color: black;
+    color: white;
+    margin: 0 auto;
+}
+
+#card-space{
+    margin-top: 110px;
+}
+
+#card-space > img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
