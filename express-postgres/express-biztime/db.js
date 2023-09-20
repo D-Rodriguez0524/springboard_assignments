@@ -1,16 +1,18 @@
 /** Database setup for BizTime. */
 
 const { Client } = require("pg");
+let DB_URI;
 
-let DB_URl;
-
-DB_URl = "postgresql:///biztime_exercise:biztime123@1ocalhost:5432/biztime";
-
-const db = new Client({
-    connectionString: DB_URl
+if (process.env.NODE_ENV === "test") {
+    DB_URI = "postgresql://biztime_:sunrise69@localhost:5432/biztime_test"
+} else {
+    DB_URI = "postgresql://biztime_:sunrise69@localhost:5432/biztime"
+}
+let db = new Client({
+    connectionString: DB_URI
 });
 
 db.connect();
 
-
 module.exports = db;
+

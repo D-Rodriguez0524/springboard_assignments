@@ -97,16 +97,6 @@ router.put('/:id', async (req, res, next) => {
             throw new ExpressError(`No such invoice: ${id}`, 404);
         }
 
-        const currPaidDate = currResult.rows[0].paid_date;
-
-        if (!currPaidDate && paid) {
-            paidDate = new Date();
-        } else if (!paid) {
-            paidDate = null
-        } else {
-            paidDate = currPaidDate;
-        }
-
         const result = await db.query(
             `UPDATE invoices
            SET amt=$1, paid=$2, paid_date=$3
