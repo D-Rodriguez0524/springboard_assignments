@@ -1,0 +1,9 @@
+.Navbar {
+    padding: 1rem;
+}
+
+.Navbar a {
+    margin: 1.5rem;
+    font-size: 1.5rem;
+    color: black;
+}
