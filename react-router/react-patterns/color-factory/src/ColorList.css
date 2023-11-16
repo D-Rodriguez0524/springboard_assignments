@@ -1,0 +1,13 @@
+.ColorList {
+    background-color: black;
+    height: 100px;
+    padding: 20px;
+}
+
+.ColorList-title {
+    color: white;
+}
+
+.ColorList-form-link {
+    color: white;
+}
